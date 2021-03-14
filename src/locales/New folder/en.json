@@ -1,0 +1,39 @@
+{
+    "logo": "logo",
+    "numInEgypt": "COVID- 19 Live in EGYPT",
+    "numInWorld": "COVID- 19 Live in World",
+    "CoronavirusSymptoms": "Coronavirus Symptoms",
+    "table": "table of data",
+    "Rules": "Rules",
+    "recovered": "recovered",
+    "deaths": "deaths",
+    "header": "Prevention from Corona Virus (COVID-19) Stay Home, Stay Safe",
+    "confirmed": "confirmed",
+    "flag": "flag",
+    "nameCountry": "name Country",
+    "confirmedCountry": "confirmed in Country",
+    "recoveredCountry": "recovered in Country",
+    "deathsCountry": "deaths in Country",
+    "activeCountry": "active in Country",
+    "search": "search",
+    "comingSoon": "coming Soon",
+    "Shortness-of-breath": "Shortness-of-breath",
+    "Cough": "Cough",
+
+    "Fever": "Fever",
+    "Hot-Fever": "Hot-Fever",
+
+    "Diarrhea": "Diarrhea",
+
+    "Headache": "Headache",
+
+    "Sore-Throat": "Sore-Throat",
+    "Wear-Mask": "Wear Mask",
+    "Wash Your Hand": "Wash Your Hand",
+
+    "Cough Etiauette": "Cough Etiauette",
+    "Clean & Disinfect": "Clean & Disinfect",
+    "Frequently Self-Isolation": "Frequently Self-Isolation",
+    "Frequently Waterintake": "Frequently Waterintake"
+
+}
