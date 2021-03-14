@@ -39,7 +39,7 @@ export default {
   },
   mounted(){
     this.dir=localStorage.getItem('dir')||'ltr';
-      this.$i18n.locale = localStorage.getItem('dir')=='ltr'?'en':'ar';
+      this.$i18n.locale = this.dir=='ltr'?'en':'ar';
     this.$store.dispatch("fetchUsers");
     this.$store.dispatch("fetchEgypt");
     this.$store.dispatch("fetchWorld");

@@ -66,7 +66,6 @@ export default new Vuex.Store({
                 .get(`https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/brief`)
                 .then((res) => {
                     commit('world', res.data);
-                    console.log(res.data)
 
                 }).catch(err => {
                     console.log(err)
@@ -80,7 +79,6 @@ export default new Vuex.Store({
                 .then((res) => {
                     commit('set', res.data);
                     commit('getLoading', false);
-                    console.log(res.data)
 
                 }).catch(err => {
                     console.log(err)

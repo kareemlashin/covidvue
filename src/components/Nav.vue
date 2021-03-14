@@ -19,10 +19,10 @@
             </li>
             <li>
                 <div class="rtlOrLtr mb px-3 rounded-pill mt-1">
-                    <a @click="language('ar')" v-if="lang=='en'?true:false">
+                    <a @click="language('ar')" class="w-100 h-100" v-if="lang=='en'?true:false">
                       العربيه
                     </a>
-                    <a @click="language('en')" v-if="lang=='ar'?true:false">
+                    <a @click="language('en')" class="w-100 h-100" v-if="lang=='ar'?true:false">
                       English
                     </a>
                     
@@ -74,7 +74,7 @@ export default {
     let x=document.getElementById("nav");
     this.margin=x.clientHeight/2+'px';
     
-      this.$i18n.locale = 'en'||localStorage.getItem('lang');
+      this.$i18n.locale = localStorage.getItem('lang')||'en';
       this.lang=this.$i18n.locale;
       this.dir=this.$i18n.locale=="en"?'ltr':'rtl';
   },
