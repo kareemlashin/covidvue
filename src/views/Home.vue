@@ -1,6 +1,10 @@
 <template>
-  <div class="home " :dir="dir">
-      <Loading v-if="loading"/>
+  <div :dir="dir">
+    <div  v-if="load">
+         <Loading />
+
+</div>
+
 
     <Nav @dir="dir=$event"/>
     <Header />
@@ -15,6 +19,7 @@
 
 <script>
 // @ is an alias to /src
+import Loading from "./../components/Loading.vue";
 import Egypt from "./../components/Egypt.vue";
 import Header from "./../components/Header.vue";
 import Nav from "./../components/Nav.vue";
@@ -22,7 +27,6 @@ import Rules from "./../components/Rules.vue";
 import Symptoms from "./../components/Symptoms.vue";
 import World from "./../components/World.vue";
 import Table from "./../components/Table.vue";
-import Loading from './../components/Loading.vue';
 export default {
   name: 'Home',
   components: {
@@ -41,7 +45,7 @@ export default {
     this.$store.dispatch("fetchWorld");
   },computed: {
       
-    loading() {
+    load() {
 
       return this.$store.getters.loading;
     },

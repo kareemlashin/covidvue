@@ -1,10 +1,9 @@
 
 <template>
-  <div>
    <div id="splash-screen" class="splash-screen">
     <div class="loader"></div>
 </div>
-  </div>
+  
 </template>
 
 <script>

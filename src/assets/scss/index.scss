@@ -397,6 +397,8 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: #fff;
+    z-index: 99999999999999 !important;
+
 }
 
 .no-js .splash-screen {
