@@ -51,7 +51,7 @@ export default new Vuex.Store({
             commit
         }) {
             axios
-                .get(`https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest?iso2=EG&onlyCountries=true`)
+                .get(`https://covid19.mathdro.id/api/countries/egypt`)
                 .then((res) => {
                     commit('egypt', res.data);
 
@@ -63,7 +63,7 @@ export default new Vuex.Store({
             commit
         }) {
             axios
-                .get(`https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/brief`)
+                .get(`https://coronavirus-19-api.herokuapp.com/all`)
                 .then((res) => {
                     commit('world', res.data);
 

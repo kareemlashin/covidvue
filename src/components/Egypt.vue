@@ -10,7 +10,7 @@
                     <p class="text-center">{{$t('confirmed')}}</p>
 
                     <h4 id="confirmed" class="text-center">
-                        {{world.confirmed}}
+                        {{world.cases}}
                     </h4>
 
 

@@ -9,7 +9,7 @@
                 <div class="bg-img-sectio border-sec-one p-5 shadow text-center border-10 border-bottom-second">
                     <p class="text-center">{{ $t('confirmed')}}</p>
                     <h4 id="confirmed-eg" class="text-center">
-                        {{egypt[0].confirmed}}
+                        {{egypt.confirmed.value}}
                     </h4>
 
 
@@ -19,7 +19,7 @@
                 <div class="bg-img-sectio border-sec-one p-5 shadow text-center border-10 border-bottom-first">
                     <p class="text-center">{{ $t('deaths')}}</p>
                     <h4 id="deathseg-eg" class="text-center">
-                                                {{egypt[0].deaths}}
+                                                {{egypt.deaths.value}}
 
                     </h4>
 
@@ -30,7 +30,7 @@
                 <div class="bg-img-sectio border-sec-one p-5 shadow text-center border-10 border-bottom-second">
                     <p class="text-center">{{ $t('recovered')}}</p>
                     <h4 id="recovered-eg" class="text-center">
-                                                                        {{egypt[0].recovered}}
+                                                                        {{egypt.recovered.value}}
 
                     </h4>
 
