@@ -8,12 +8,18 @@
             type="text"
             class="w-50 rounded-pill serch-inp"
             :placeholder="$t('search')"
-            v-model="search"
+            v-model="message"
           />
         </div>
-        <div class="row mt-4" v-if="tables.length>0 ? true:false">
+        <div class="row mt-4" v-if="tables.length > 0 ? true : false">
           <div
-            class="pt-2 fix-table col-md-12 table-responsive table-scroll text-center"
+            class="
+              pt-2
+              fix-table
+              col-md-12
+              table-responsive table-scroll
+              text-center
+            "
           >
             <table class="table table-hover">
               <thead>
@@ -42,9 +48,11 @@
                   v-for="(table, index) in tables"
                   :key="table.countryRegion + '' + index"
                 >
-                  <td class="text-center"><flag :iso="table.iso2" /></td>
-                  <td class="text-center">{{ table.countryRegion }}</td>
-                  <td class="text-center">{{ table.confirmed }}</td>
+                  <td class="text-center">
+                    <flag :iso="table.countryInfo.iso2" />
+                  </td>
+                  <td class="text-center">{{ table.country }}</td>
+                  <td class="text-center">{{ table.cases }}</td>
                   <td class="text-center">{{ table.recovered }}</td>
                   <td class="text-center">{{ table.deaths }}</td>
                   <td class="text-center">{{ table.active }}</td>
@@ -55,7 +63,7 @@
         </div>
         <div
           class="text-center shadow my-5 py-5 not-found"
-          v-if="tables.length<=0 ? true:false"
+          v-if="tables.length <= 0 ? true : false"
         >
           <i class="fas fa-server"></i>
           <p>{{ $t("oops") }}!!</p>
@@ -72,18 +80,18 @@ export default {
   created() {},
   data() {
     return {
-      search: "",
+      nameCountry: "",
+      message: "",
     };
   },
-  props: {},
-  methods: {},
   computed: {
     tables() {
-      if (this.search) {
-        return this.$store.getters.all.filter(x=>{ 
-        return  x.countryRegion.toLowerCase().includes(this.search.toLowerCase())
-        }
-        );
+      if (this.message) {
+        return this.$store.getters.all.filter((x) => {
+          return x.country
+            .toLowerCase()
+            .includes(this.message.toLowerCase());
+        });
       } else {
         return this.$store.getters.all;
       }

@@ -75,7 +75,7 @@ export default new Vuex.Store({
             commit
         }) {
             axios
-                .get(`https://covid19.mathdro.id/api/recovered`)
+                .get(`https://disease.sh/v3/covid-19/countries`)
                 .then((res) => {
                     commit('set', res.data);
                     commit('getLoading', false);
